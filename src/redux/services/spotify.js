@@ -12,7 +12,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
         endpoints: (builder) => ({
             getAlbumTracks: builder.query({ query: () => '/charts/track?' + new URLSearchParams({
                 locale: 'en-US',
-                // listId: 'ip-country-chart-IN',
+                listId: 'ip-country-chart-IN',
                 pageSize: '20',
                 startFrom: '0',
             })}),
@@ -21,19 +21,19 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
             getSongsByCountry: builder.query({query: () => `/charts/track?` + new URLSearchParams({
                 locale: 'en-US',
                 listId: 'ip-city-chart-1275339',
-                pageSize: '40',
+                pageSize: '20',
                 startFrom: '36',
             })}),
             getTopCharts: builder.query({query: () => `/charts/track?` + new URLSearchParams({
                 locale: 'en-US',
                 listId: 'ip-city-chart-1275339',
                 pageSize: '20',
-                startFrom: '16',
+                startFrom: '40',
             })}),
             getTopArtists: builder.query({query: () => `/charts/track?` + new URLSearchParams({
                 locale: 'en-US',
                 listId: 'ip-country-chart-IN',
-                pageSize: '60',
+                pageSize: '20',
                 startFrom: '17',
             })}),
             getSongsBySearch: builder.query({query: (searchTerm) => `/search?term=${searchTerm}`}),
